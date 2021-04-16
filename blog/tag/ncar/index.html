@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posts by Max Grover &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Posts tagged ncar &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.ee6fb81b276d6fba8a971ad8e9b95dd9.css" rel="stylesheet" />
@@ -82,7 +82,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
-  title="Posts by Max Grover"
+  title="Posts tagged ncar"
 />
  
 <style type="text/css">
@@ -234,7 +234,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
 <div class="section">
   <h1>
-     Posts by  Max Grover 
+     Posts tagged  ncar 
   </h1>
    
 
@@ -255,7 +255,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-user"></i></span
   >
    
-  <a href="#">Max Grover</a>  
+  <a href="../../author/max-grover/">Max Grover</a>  
 </li>
     
 <li id="tags">
@@ -263,9 +263,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../tag/jupyterhub/">jupyterhub</a>   
-  <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/ncar/">ncar</a>  
+  <a href="../jupyterhub/">jupyterhub</a>   
+  <a href="../dask/">dask</a>   
+  <a href="#">ncar</a>  
 </li>
  
     </ul>
@@ -273,199 +273,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>You must update the package to use the newest updates. You can update using conda!</p>
 
     <p><a href="../../../posts/ncar-jobqueue-example/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/intake_esm_dask/"
-        >An Example of Using Intake-ESM</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 09 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/intake/">intake</a>   
-  <a href="../../tag/cesm/">cesm</a>  
-</li>
- 
-    </ul>
-    <p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
-<p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
-
-    <p><a href="../../../posts/intake_esm_dask/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/casper_pbs_dask/"
-        >Using Dask on the New Casper PBS Scheduler</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 06 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/jupyterhub/">jupyterhub</a>   
-  <a href="../../tag/dask/">dask</a>  
-</li>
- 
-    </ul>
-    <p>Non-consecutive header level increase; 0 to 2 [myst.header]</p>
-<p>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a>.</p>
-
-    <p><a href="../../../posts/casper_pbs_dask/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/software-citation/"
-        >The Importance of Software Citation</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 02 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/open-science/">open-science</a>   
-  <a href="../../tag/citation/">citation</a>   
-  <a href="../../tag/software/">software</a>  
-</li>
- 
-    </ul>
-    <p>One of the questions that came up during the <a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/">ESDS Town Hall</a> was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.</p>
-<p>Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</p>
-
-    <p><a href="../../../posts/software-citation/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/esds-blog/"
-        >NCAR-CGD ESDS Town Hall</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 26 March 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/townhall/">townhall</a>   
-  <a href="../../tag/cgd/">cgd</a>   
-  <a href="../../tag/questions/">questions</a>  
-</li>
- 
-    </ul>
-    <p>Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.</p>
-<p>The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.</p>
-
-    <p><a href="../../../posts/esds-blog/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/Interactive_Dashboard/"
-        >HiRes-CESM Interactive Dashboard Example</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 19 March 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/dashboard/">dashboard</a>   
-  <a href="../../tag/jupyter/">jupyter</a>  
-</li>
- 
-    </ul>
-    <p>In this example, our goal is to create an interactive dashboard, using images already output on a remote server.</p>
-<p>We are specifically interested in looking at plots created using the <a class="reference external" href="https://github.com/marbl-ecosys/HiRes-CESM-analysis">HighRes-CESM-Analysis</a> repository.</p>
-<img alt="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg" src="http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg" />
-    <p><a href="../../../posts/Interactive_Dashboard/">Read more ...</a></p>
     <hr />
   </div>
    
