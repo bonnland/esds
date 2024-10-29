@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NCAR-ESDS'
-copyright = '2021, NCAR Earth System Data Science Team'
-author = 'NCAR Earth System Data Science Team'
+project = 'ESDS'
+copyright = '2024, Earth System Data Science (ESDS) Team'
+author = 'Earth System Data Science (ESDS) Team'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
@@ -33,9 +33,14 @@ release = '0.1'
 extensions = [
     'myst_nb',
     'ablog',
-    'sphinx_panels',
-    'sphinx_comments',
+    'sphinxext.rediraffe',
+    'sphinx_design',
+    'sphinx_copybutton',
 ]
+
+# sphinx-copybutton configurations
+copybutton_prompt_text = r'>>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: '
+copybutton_prompt_is_regexp = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -45,6 +50,8 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+# Set language which will propagate to the top-level HTML tag
+language = 'en'
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -56,24 +63,38 @@ html_theme = 'pydata_sphinx_theme'
 # Add some more theme Options
 html_theme_options = {
     'github_url': 'https://github.com/ncar/esds',
-    'search_bar_text': 'Search this site... ',
-    'search_bar_position': 'navbar',
+    'google_analytics_id': 'UA-196809533-1',
+    'navbar_end': ['navbar-icon-links'],
 }
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+rediraffe_redirects = 'redirects.txt'
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_sidebars = {
+    'index': ['hello.html'],
+    'about': ['hello.html'],
+    'faq': ['hello.html'],
+    'communication': ['hello.html'],
+    'blog': ['sidebar-nav-bs.html', 'tagcloud.html', 'archives.html'],
+    'posts/**': [
+        'sidebar-nav-bs.html',
+        'postcard.html',
+        'recentposts.html',
+        'archives.html',
+    ],
+}
+
+
 blog_baseurl = 'ncar.github.io/esds/'
-blog_title = 'NCAR ESDS'
+blog_title = 'ESDS'
 blog_path = 'blog'
 fontawesome_included = True
-blog_post_pattern = 'posts/*'
+blog_post_pattern = 'posts/*/*'
 post_redirect_refresh = 1
 post_auto_image = 1
 post_auto_excerpt = 2
@@ -82,16 +103,12 @@ post_auto_excerpt = 2
 panels_add_bootstrap_css = False
 
 # MyST config
-myst_admonition_enable = True
-myst_deflist_enable = True
+myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image', 'dollarmath']
+myst_url_schemes = ['http', 'https', 'mailto']
+
 
 # Temporarily stored as off until we fix it
 jupyter_execute_notebooks = 'off'
-
-
-comments_config = {
-    'utterances': {'repo': 'NCAR/esds', 'optional': 'config', 'label': '💬 comment'},
-}
 
 
 def setup(app):
